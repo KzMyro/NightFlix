@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Top tendances NightFlix avec classement anime.">
+  <title>NightFlix | Top tendances</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="trends">
+  <header class="site-header" data-header>
+    <a class="logo" href="index.html">Night<span>Flix</span></a>
+    <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" data-nav>
+      <a href="index.html">Accueil</a>
+      <a href="films.html">Films</a>
+      <a class="active" href="tendances.html">Top tendances</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="maliste.html">Ma Liste <span class="nav-count" data-nav-list-count>0</span></a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="page-hero reveal">
+      <p class="eyebrow">Classement</p>
+      <h1>Top 10 de la semaine.</h1>
+      <p>Un classement visuel avec score, progression et compteurs animes.</p>
+      <div class="trend-metrics">
+        <article><strong data-counter="126000">0</strong><span>vues cette semaine</span></article>
+        <article><strong data-counter="92">0</strong><span>% de satisfaction</span></article>
+        <article><strong data-counter="10">0</strong><span>films classes</span></article>
+      </div>
+    </section>
+
+    <section class="ranking-list reveal" data-ranking></section>
+  </main>
+
+  <footer class="footer">
+    <strong>NightFlix</strong>
+    <p>NightFlix - Les films qui dominent la semaine.</p>
+  </footer>
+  <button class="back-top" data-back-top aria-label="Retour en haut">&#8593;</button>
+</body>
+</html>

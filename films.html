@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galerie dynamique des films NightFlix avec recherche, filtres et popup.">
+  <title>NightFlix | Films</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="films">
+  <header class="site-header" data-header>
+    <a class="logo" href="index.html">Night<span>Flix</span></a>
+    <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" data-nav>
+      <a href="index.html">Accueil</a>
+      <a class="active" href="films.html">Films</a>
+      <a href="tendances.html">Top tendances</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="maliste.html">Ma Liste <span class="nav-count" data-nav-list-count>0</span></a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="page-hero compact reveal">
+      <p class="eyebrow">Catalogue</p>
+      <h1>Trouve ton prochain frisson.</h1>
+      <p>Recherche par titre, filtre par genre et ouvre une fiche film dynamique.</p>
+    </section>
+
+    <section class="toolbar films-toolbar reveal" aria-label="Recherche et filtres">
+      <label class="search-box">
+        <span>Recherche</span>
+        <input type="search" data-search placeholder="Ex: Ombres rouges">
+        <div class="search-suggestions" data-search-suggestions></div>
+      </label>
+      <div class="filters" data-filters>
+        <button class="filter active" data-category="Tous">Tous</button>
+        <button class="filter" data-category="Horreur">Horreur</button>
+        <button class="filter" data-category="Thriller">Thriller</button>
+        <button class="filter" data-category="Action">Action</button>
+        <button class="filter" data-category="Science-fiction">Science-fiction</button>
+        <button class="filter" data-category="Fantastique">Fantastique</button>
+        <button class="filter" data-category="Survival">Survival</button>
+        <button class="filter" data-category="Psychologique">Psychologique</button>
+        <button class="filter" data-category="Mystere">Mystere</button>
+        <button class="filter" data-category="Aventure">Aventure</button>
+        <button class="filter" data-category="Apocalypse">Apocalypse</button>
+        <button class="filter" data-category="Paranormal">Paranormal</button>
+        <button class="filter" data-category="Crime">Crime</button>
+        <button class="filter" data-category="Suspense">Suspense</button>
+      </div>
+    </section>
+
+    <section class="movie-grid reveal" data-movie-grid></section>
+    <p class="empty-state" data-empty hidden>Aucun film ne correspond a cette recherche.</p>
+  </main>
+
+  <div class="modal" data-modal aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+    <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" data-close-modal aria-label="Fermer la popup">&times;</button>
+      <img data-modal-img alt="">
+      <div class="modal-content">
+        <span data-modal-category></span>
+        <h2 id="modal-title" data-modal-title></h2>
+        <p data-modal-description></p>
+        <strong data-modal-rating></strong>
+      </div>
+    </article>
+  </div>
+
+  <footer class="footer">
+    <strong>NightFlix</strong>
+    <p>NightFlix - Un catalogue sombre pour trouver votre prochain film marquant.</p>
+  </footer>
+  <button class="back-top" data-back-top aria-label="Retour en haut">&#8593;</button>
+</body>
+</html>

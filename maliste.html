@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ma Liste NightFlix sauvegardee avec localStorage.">
+  <title>NightFlix | Ma Liste</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="list">
+  <header class="site-header" data-header>
+    <a class="logo" href="index.html">Night<span>Flix</span></a>
+    <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" data-nav>
+      <a href="index.html">Accueil</a>
+      <a href="films.html">Films</a>
+      <a href="tendances.html">Top tendances</a>
+      <a href="quiz.html">Quiz</a>
+      <a class="active" href="maliste.html">Ma Liste <span class="nav-count" data-nav-list-count>0</span></a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="page-hero compact reveal">
+      <p class="eyebrow">Selection personnelle</p>
+      <h1>Ma Liste.</h1>
+      <p>Retrouve ici les films sauvegardes pendant ta navigation. La liste reste en memoire grace a localStorage.</p>
+      <div class="list-counter">
+        <strong data-list-total>0</strong>
+        <span>films sauvegardes</span>
+      </div>
+    </section>
+
+    <section class="movie-grid reveal" data-my-list-grid></section>
+    <p class="empty-state list-empty" data-list-empty hidden>Votre liste est vide.</p>
+  </main>
+
+  <footer class="footer">
+    <strong>NightFlix</strong>
+    <p>NightFlix - Gardez vos prochains frissons a portee de clic.</p>
+  </footer>
+  <button class="back-top" data-back-top aria-label="Retour en haut">&#8593;</button>
+</body>
+</html>

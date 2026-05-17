@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NightFlix, une fausse plateforme de streaming dédiée aux films d'horreur, thrillers et séries sombres.">
+  <title>NightFlix | Accueil</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="home">
+  <header class="site-header" data-header>
+    <a class="logo" href="index.html" aria-label="NightFlix accueil">Night<span>Flix</span></a>
+    <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" data-nav>
+      <a class="active" href="index.html">Accueil</a>
+      <a href="films.html">Films</a>
+      <a href="tendances.html">Top tendances</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="maliste.html">Ma Liste <span class="nav-count" data-nav-list-count>0</span></a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Collection originale NightFlix</p>
+        <h1>La nuit commence ici.</h1>
+        <p class="hero-text">Films d'horreur, thrillers nerveux et series sombres dans une interface immersive inspiree des vraies plateformes de streaming.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="films.html">Explorer les films</a>
+          <a class="btn ghost" href="tendances.html">Voir le top 10</a>
+        </div>
+      </div>
+      <div class="hero-panel reveal">
+        <span class="live-dot"></span>
+        <strong>Ce soir</strong>
+        <p>Marathon frissons: 12 titres selectionnes automatiquement.</p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">En avant</p>
+          <h2>Films populaires</h2>
+        </div>
+        <a class="text-link" href="films.html">Voir plus</a>
+      </div>
+      <div class="carousel-shell">
+        <button class="carousel-btn prev" data-carousel-prev aria-label="Film precedent">&#10094;</button>
+        <div class="carousel-track" data-carousel></div>
+        <button class="carousel-btn next" data-carousel-next aria-label="Film suivant">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="section random-picker reveal">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Decision rapide</p>
+          <h2>Choisis-moi un film</h2>
+        </div>
+      </div>
+      <div class="picker-layout">
+        <div class="picker-controls">
+          <p>Selectionne une ambiance ou laisse NightFlix choisir dans tout le catalogue.</p>
+          <select data-random-category aria-label="Categorie du film aleatoire">
+            <option value="Tous">Toutes les categories</option>
+            <option value="Horreur">Horreur</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Action">Action</option>
+            <option value="Science-fiction">Science-fiction</option>
+            <option value="Paranormal">Paranormal</option>
+            <option value="Psychologique">Psychologique</option>
+            <option value="Survival">Survival</option>
+            <option value="Apocalypse">Apocalypse</option>
+            <option value="Crime">Crime</option>
+          </select>
+          <button class="btn primary" data-random-pick type="button">Choisir un film aleatoire</button>
+        </div>
+        <article class="random-result" data-random-result>
+          <img src="" alt="" data-random-img hidden>
+          <div>
+            <span data-random-category-label>NightFlix</span>
+            <h3 data-random-title>Prêt pour le hasard ?</h3>
+            <p data-random-description>Choisis une categorie, clique sur le bouton, et laisse le site te proposer un film.</p>
+            <strong data-random-rating></strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Classement</p>
+          <h2>Top tendance</h2>
+        </div>
+      </div>
+      <div class="home-row" data-home-row="top"></div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Selection</p>
+          <h2>Recommande pour vous</h2>
+        </div>
+      </div>
+      <div class="home-row" data-home-row="recommended"></div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Ajouts recents</p>
+          <h2>Nouveautes</h2>
+        </div>
+      </div>
+      <div class="home-row" data-home-row="new"></div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Audience</p>
+          <h2>Les plus regardes</h2>
+        </div>
+      </div>
+      <div class="home-row" data-home-row="watched"></div>
+    </section>
+
+    <section class="section split-section reveal">
+      <div>
+        <p class="eyebrow">Experience</p>
+        <h2>Une interface pensée pour impressionner.</h2>
+        <p>NightFlix combine navigation fluide, cartes animees, recommandations et effets immersifs pour explorer le cinema sombre avec une vraie sensation de plateforme premium.</p>
+      </div>
+      <div class="stats-grid">
+        <article>
+          <strong data-counter="102">0</strong>
+          <span>films classes</span>
+        </article>
+        <article>
+          <strong data-counter="13">0</strong>
+          <span>categories</span>
+        </article>
+        <article>
+          <strong data-counter="10">0</strong>
+          <span>tendances</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <strong>NightFlix</strong>
+    <p>NightFlix - Explorez les meilleurs univers du cinema moderne.</p>
+  </footer>
+
+  <button class="back-top" data-back-top aria-label="Retour en haut">&#8593;</button>
+</body>
+</html>

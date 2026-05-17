@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quiz NightFlix pour recommander un film selon vos goûts.">
+  <title>NightFlix | Quiz</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="quiz">
+  <header class="site-header" data-header>
+    <a class="logo" href="index.html">Night<span>Flix</span></a>
+    <button class="menu-toggle" data-menu-toggle aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" data-nav>
+      <a href="index.html">Accueil</a>
+      <a href="films.html">Films</a>
+      <a href="tendances.html">Top tendances</a>
+      <a class="active" href="quiz.html">Quiz</a>
+      <a href="maliste.html">Ma Liste <span class="nav-count" data-nav-list-count>0</span></a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-wrap quiz-page">
+    <section class="page-hero compact reveal">
+      <p class="eyebrow">Recommandation</p>
+      <h1>Quiz NightFlix.</h1>
+      <p>Reponds a cinq questions et laisse NightFlix trouver le film qui correspond a ton humeur.</p>
+    </section>
+
+    <section class="quiz-card reveal" data-quiz>
+      <div class="quiz-progress"><span data-quiz-progress></span></div>
+      <p class="eyebrow" data-quiz-step>Question 1 / 5</p>
+      <h2 data-quiz-question></h2>
+      <div class="quiz-options" data-quiz-options></div>
+      <article class="quiz-result" data-quiz-result hidden></article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <strong>NightFlix</strong>
+    <p>NightFlix - Trouvez le film qui correspond a votre humeur.</p>
+  </footer>
+  <button class="back-top" data-back-top aria-label="Retour en haut">&#8593;</button>
+</body>
+</html>
